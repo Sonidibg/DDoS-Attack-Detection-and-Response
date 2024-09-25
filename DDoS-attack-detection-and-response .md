@@ -1,4 +1,4 @@
-# Project 4: DDoS Attack Detection and Response
+ DDoS Attack Detection and Response
 
 ## Introduction
 A Distributed Denial of Service (DDoS) attack aims to overwhelm a network, service, or server with excessive traffic from multiple sources, rendering it unavailable to users. Detecting and responding to DDoS attacks is crucial for maintaining the availability and performance of online services. In this project, you will learn how to detect and respond to DDoS attacks using various tools and techniques.
@@ -50,13 +50,11 @@ The Victim Machine's web server becomes unresponsive due to high traffic.
 ### Task 2: Capture Network Traffic
 **Step 1***: Install Wireshark and tcpdump on the Monitoring Machine.
 ```bash
-Copy code
 sudo apt-get update
 sudo apt-get install wireshark tcpdump
 ```
 **Step 2**: Capture traffic using tcpdump.
 ```bash
-Copy code
 sudo tcpdump -i eth0 -w ddos-attack.pcap
 ```
 Expected Output: A pcap file (ddos-attack.pcap) is created with the captured network traffic.
@@ -75,7 +73,6 @@ Expected Output: A list of IP addresses generating excessive traffic.
 
 **Step 1**: Install Snort on the Monitoring Machine.
 ```bash
-Copy code
 sudo apt-get update
 sudo apt-get install snort
 ```
@@ -114,11 +111,5 @@ sudo systemctl restart fail2ban
 
 Expected Output: IPs generating excessive requests are banned, mitigating the DDoS attack.
 
-
-### Additional Resources
-Wireshark Documentation
-Snort User Manual
-fail2ban Documentation
-DDoSify GitHub Repository
 
    
